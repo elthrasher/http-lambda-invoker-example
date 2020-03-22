@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`default tests should be replaced with a real test 1`] = `
+Object {
+  "body": "{\\"data\\":\\"contains valueable serverless data\\"}",
+  "statusCode": 200,
+}
+`;

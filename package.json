@@ -1,0 +1,42 @@
+{
+  "name": "http-lambda-invoker-example",
+  "version": "1.0.14",
+  "description": "Show how to use http-lambda-invoker-example",
+  "scripts": {
+    "build": "npm run clean && webpack",
+    "clean": "rimraf build coverage",
+    "lint": "eslint --ext .ts .",
+    "start": "sam local start-api",
+    "test": "jest --coverage",
+    "watch": "webpack --watch --progress"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.640.0"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.17",
+    "@types/jest": "^25.1.4",
+    "@types/node": "^12.12.30",
+    "@typescript-eslint/eslint-plugin": "^2.24.0",
+    "@typescript-eslint/parser": "^2.24.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "jest": "^25.1.0",
+    "prettier": "^2.0.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^25.2.1",
+    "ts-loader": "^6.2.1",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.3",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.3.1"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.ts"
+    ],
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  }
+}

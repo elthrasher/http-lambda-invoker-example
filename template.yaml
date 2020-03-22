@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Test project to demonstrate http-lambda-invoker
+Transform: AWS::Serverless-2016-10-31
+
+Resources:
+  HttpLambdaInvokerExampleFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: build/
+      FunctionName: HttpLambdaInvokerExample
+      Handler: app.HttpLambdaInvokerExample
+      Timeout: 15
+      Runtime: nodejs12.x
+      Events:
+        HttpApi:
+          Type: Api
+          Properties:
+            Method: GET
+            Path: /data

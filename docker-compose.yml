@@ -1,0 +1,33 @@
+version: '3.7'
+
+services:
+  api:
+    container_name: api
+    image: gg
+    environment:
+      - LAMBDA_ENDPOINT=http://lambda:9001
+      - LAMBDA_NAME=HttpLambdaInvokerExample
+      - PORT=8080
+    ports:
+      - '8080:8080'
+  lambda:
+    container_name: lambda
+    image: lambci/lambda:nodejs12.x
+    command: app.HttpLambdaInvokerExample
+    environment:
+      - DOCKER_LAMBDA_STAY_OPEN=1
+      - TZ=America/New_York
+    volumes:
+      - ./build:/var/task:ro,delegated
+  legacy:
+    container_name: legacy
+    build: legacy
+    ports:
+      - '8000:8000'
+  static:
+    container_name: static
+    image: nginx
+    ports:
+      - '80:80'
+    volumes:
+      - ./public:/usr/share/nginx/html

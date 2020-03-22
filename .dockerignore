@@ -1,0 +1,10 @@
+.dockerignore
+.gitignore
+codefresh*
+docker*
+Dockerfile
+
+.vscode
+coverage
+build
+node_modules
