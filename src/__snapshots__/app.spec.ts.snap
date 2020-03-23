@@ -2,7 +2,7 @@
 
 exports[`default tests should be replaced with a real test 1`] = `
 Object {
-  "body": "{\\"data\\":\\"contains valueable serverless data\\"}",
+  "body": "{\\"data\\":\\"contains valuable serverless data\\"}",
   "statusCode": 200,
 }
 `;
