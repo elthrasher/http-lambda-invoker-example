@@ -1,6 +1,8 @@
 # http-lambda-invoker-example
 Demo of adding a serverless function into an existing docker-based local development environment.
 
+Check out the [blog post](https://dev.to/elthrasher/integrating-sam-into-container-workflows-with-http-lambda-invoker-4o8) explaining why.
+
 ## Dependencies and build
 
 * `npm i`
