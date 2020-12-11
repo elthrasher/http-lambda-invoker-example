@@ -11,7 +11,7 @@
     "watch": "webpack --watch --progress"
   },
   "dependencies": {
-    "aws-sdk": "^2.807.0"
+    "aws-sdk": "^2.808.0"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.65",
